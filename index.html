@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exemplo Toggle</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <main class="cartoes" id="cartoes">
+        <article class="cartao">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSSb_RKFv4QxNn--_7BFDxJiNA9sN9dk18ZrQ&" alt="Buraco do Padre em Itaiacoca">
+            <div class="texto">
+                <h3>Buraco do Padre</h3>
+                <p>Uma exelente paisagem</p>
+                <button class="mais">Saiba mais</button>
+            </div>
+        </article>
+    </main>
+    <button class="alternar" onclick="esconder()">Alternar</button>
+    <script>
+        function esconder(){
+            var elemento = document.getElementById("cartoes");
+            elemento.classList.toggle("desativada");
+        }
+    </script>
+</body>
+</html>
