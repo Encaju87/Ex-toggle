@@ -14,7 +14,7 @@
     border-radius: 20px;
     background-color: var(--trinta);
     height: auto;
-    width: 445px;
+    width: 223px;
 }
 
 .cartao {
@@ -26,8 +26,34 @@
     background-color: var(--sessenta);
     color: var(--dez);
 }
+.cartao:hover{
+    background-color: var(--dez);
+    color: var(--sessenta);
+    box-shadow: 2px 2px 0px 0px var(--sessenta);
+}
+
+.cartao2 {
+    flex: 0 0 200px;
+    margin: 10px;
+    border: none;
+    box-shadow: 2px 2px 0px 0px var(--sessenta);
+    border-radius: 20px;
+    background-color: var(--dez);
+    color: var(--sessenta);
+}
+.cartao2:hover{
+    background-color: var(--sessenta);
+    color: var(--dez);
+    box-shadow: 2px 2px 0px 0px var(--dez);
+}
 
 .cartao img{
+    width: 100%;
+    border-radius: 20px;
+    height: 150px;
+}
+
+.cartao2 img{
     width: 100%;
     border-radius: 20px;
     height: 150px;
@@ -50,17 +76,14 @@
     box-shadow: 1px 1px 6px 0px black;
 }
 
-.desativada {
-    display: none;
-}
-.ativada {
-    display: block;
-}
-
 .alternar {
-    background-color: #BCE5FF;
+    background-color: var(--detail1);
     border-radius: 5px;
     height: 20px;
     width: 100px;
     border: none;
+    margin-top: 10px;
+}
+.alternar:hover {
+    background-color: var(--detail2);
 }

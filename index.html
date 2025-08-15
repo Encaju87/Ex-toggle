@@ -8,7 +8,7 @@
 </head>
 <body>
     <main class="cartoes" id="cartoes">
-        <article class="cartao" id="cartao">
+        <article class="cartao" id="cartao1">
             <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSSb_RKFv4QxNn--_7BFDxJiNA9sN9dk18ZrQ&" alt="Buraco do Padre em Itaiacoca">
             <div class="texto">
                 <h3>Buraco do Padre</h3>
@@ -16,7 +16,7 @@
                 <button class="mais">Saiba mais</button>
             </div>
         </article>
-        <article class="cartao" id="cartao2">
+        <article class="cartao2" id="cartao2" style="display: none;">
             <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT_IXskPLpw76Wgz6HowNejbVmjyaGjsQsbFA&s" alt="O Coliseu em Roma">
             <div class="texto">
                 <h3>Coliseu</h3>
@@ -25,11 +25,16 @@
             </div>
         </article>
     </main>
-    <button class="alternar" onclick="esconder()">Alternar</button>
+    <button class="alternar" onclick="alternarCartoes()">Alternar</button>
     <script>
-        function esconder(){
-            var elemento1 = document.getElementById("cartao");
-            elemento1.classList.toggle("desativada");
+        function alternarCartoes() {
+            var cartao1 = document.getElementById("cartao1");
+            var cartao2 = document.getElementById("cartao2");
+    
+            var inicial = cartao1.style.display !== "none";
+    
+            cartao1.style.display = inicial ? "none" : "block";
+            cartao2.style.display = inicial ? "block" : "none";
         }
     </script>
 </body>
