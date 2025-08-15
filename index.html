@@ -8,7 +8,7 @@
 </head>
 <body>
     <main class="cartoes" id="cartoes">
-        <article class="cartao">
+        <article class="cartao" id="cartao">
             <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSSb_RKFv4QxNn--_7BFDxJiNA9sN9dk18ZrQ&" alt="Buraco do Padre em Itaiacoca">
             <div class="texto">
                 <h3>Buraco do Padre</h3>
@@ -16,12 +16,20 @@
                 <button class="mais">Saiba mais</button>
             </div>
         </article>
+        <article class="cartao" id="cartao2">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT_IXskPLpw76Wgz6HowNejbVmjyaGjsQsbFA&s" alt="O Coliseu em Roma">
+            <div class="texto">
+                <h3>Coliseu</h3>
+                <p>Ponto turístico histórico</p>
+                <button class="mais">Saiba mais</button>
+            </div>
+        </article>
     </main>
     <button class="alternar" onclick="esconder()">Alternar</button>
     <script>
         function esconder(){
-            var elemento = document.getElementById("cartoes");
-            elemento.classList.toggle("desativada");
+            var elemento1 = document.getElementById("cartao");
+            elemento1.classList.toggle("desativada");
         }
     </script>
 </body>

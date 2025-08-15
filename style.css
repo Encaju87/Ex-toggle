@@ -1,20 +1,36 @@
+:root {
+    --sessenta: #011936;
+    --trinta: #465362;
+    --dez: #82A3A1;
+    --detail1: #9fc490;
+    --detail2: #c0dfa1;
+    --black: #000000;
+}
+
 .cartoes {
     display: flex;
     flex-wrap: wrap;
     align-items: stretch;
+    border-radius: 20px;
+    background-color: var(--trinta);
+    height: auto;
+    width: 445px;
 }
 
 .cartao {
     flex: 0 0 200px;
     margin: 10px;
-    border: 1px solid #ccc;
-    box-shadow: 2px 2px 6px 0px rgba(0, 0, 0, 0.3);
+    border: none;
+    box-shadow: 2px 2px 0px 0px var(--dez);
     border-radius: 20px;
+    background-color: var(--sessenta);
+    color: var(--dez);
 }
 
 .cartao img{
-    max-width: 100%;
+    width: 100%;
     border-radius: 20px;
+    height: 150px;
 }
 
 .texto {
@@ -25,7 +41,8 @@
 }
 
 .mais {
-    background-color: rgb(39, 187, 255);
+    color: var(--black);
+    background-color: var(--detail1);
     width: 50%;
     height: 25px;
     border-radius: 5px;
@@ -35,4 +52,15 @@
 
 .desativada {
     display: none;
+}
+.ativada {
+    display: block;
+}
+
+.alternar {
+    background-color: #BCE5FF;
+    border-radius: 5px;
+    height: 20px;
+    width: 100px;
+    border: none;
 }
