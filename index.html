@@ -8,7 +8,7 @@
 </head>
 <body>
     <main class="cartoes" id="cartoes">
-        <article class="cartao" id="cartao1">
+        <article class="cartao" id="cartao0">
             <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSSb_RKFv4QxNn--_7BFDxJiNA9sN9dk18ZrQ&" alt="Buraco do Padre em Itaiacoca">
             <div class="texto">
                 <h3>Buraco do Padre</h3>
@@ -16,7 +16,7 @@
                 <button class="mais">Saiba mais</button>
             </div>
         </article>
-        <article class="cartao2" id="cartao2" style="display: none;">
+        <article class="cartao2 hidden" id="cartao1">
             <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT_IXskPLpw76Wgz6HowNejbVmjyaGjsQsbFA&s" alt="O Coliseu em Roma">
             <div class="texto">
                 <h3>Coliseu</h3>
@@ -24,17 +24,48 @@
                 <button class="mais">Saiba mais</button>
             </div>
         </article>
+        <article class="cartao hidden" id="cartao2">
+            <img src="https://i0.wp.com/mundodosviajantes.com/wp-content/uploads/2016/11/Cristo-Redentor.png?resize=700%2C386" alt="O Cristo Redentor no Rio de Janeiro">
+            <div class="texto">
+                <h3>Cristo Redentor</h3>
+                <p>Crito no Corcovado</p>
+                <button class="mais">Saiba mais</button>
+            </div>
+        </article>
+        <article class="cartao2 hidden" id="cartao3">
+            <img src="https://cdn.prod.website-files.com/562e25d8b7e76f0371f0595b/643ea31499d63d62983e5a61_Vatican_City_and_St._Peter_Square_cel.webp" alt="Praça de S. Pedro em Roma">
+            <div class="texto">
+                <h3>Praça de São Pedro</h3>
+                <p>Centro da fé católica</p>
+                <button class="mais">Saiba mais</button>
+            </div>
+        </article>
+        <article class="cartao hidden" id="cartao4">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTDKnnQHNwdEMjJERnceaMYKt0VFB2AYbpQAFc5EhetkLBoi0aamibiFVNyf8U0xNbAcgE&usqp=CAU" alt="Muralha da China na China">
+            <div class="texto">
+                <h3>Muralha da China</h3>
+                <p>Ponto turístico histórico</p>
+                <button class="mais">Saiba mais</button>
+            </div>
+        </article>
+        <article class="cartao2 hidden" id="cartao5">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQbAfGquJM1RQ8zz4IV0DtBEs62k-5SVgPPlQ&s" alt="Santuário de N.S. de Aparecida em Aparecida do Norte">
+            <div class="texto">
+                <h3>Santuário de N.S.A.</h3>
+                <p>Ponto turístico católico</p>
+                <button class="mais">Saiba mais</button>
+            </div>
+        </article>
     </main>
-    <button class="alternar" onclick="alternarCartoes()">Alternar</button>
+    <button class="alternar" onclick="alt()">Alternar</button>
     <script>
-        function alternarCartoes() {
-            var cartao1 = document.getElementById("cartao1");
-            var cartao2 = document.getElementById("cartao2");
-    
-            var inicial = cartao1.style.display !== "none";
-    
-            cartao1.style.display = inicial ? "none" : "block";
-            cartao2.style.display = inicial ? "block" : "none";
+        var indiceAtual = 0;
+        var totalCartoes = 6;
+
+        function alt() {
+            document.getElementById("cartao" + indiceAtual).classList.toggle("hidden");
+            indiceAtual = (indiceAtual + 1) % totalCartoes;
+            document.getElementById("cartao" + indiceAtual).classList.toggle("hidden");              
         }
     </script>
 </body>
